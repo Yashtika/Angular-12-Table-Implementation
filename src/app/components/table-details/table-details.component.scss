@@ -1,0 +1,50 @@
+.hide {
+  display: none;
+}
+/* mat-table */
+mat-footer-row mat-footer-cell {
+  justify-content: center;
+  font-style: italic;
+}
+/* filter controls */
+.search-div {
+  margin: 10px 0px;
+}
+.search-form-field {
+  width: 40%;
+  padding: 5px 0px 0px;
+  color: black;
+  background-color: mintcream;
+  border-radius: 5px;
+}
+:host ::ng-deep .search-form-field div.mat-form-field-wrapper {
+  width: 95%;
+  padding-left: 8px;
+  padding-bottom: 1em;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    button.edit-table{
+      color: green;
+      border-radius: 7px;
+      border: 1px solid gray;
+      margin: 5px;
+    }
+    button.cancel-edit{
+      color: red;
+      border-radius: 7px;
+      border: 1px solid gray;
+      margin: 5px;
+  }
+}
+:host ::ng-deep .mat-header-cell{
+  color:black;
+  font-size: 16px;
+}
+.id-column{
+  max-width: 10%;
+}
+.body-column{
+  max-width: 30%;
+}

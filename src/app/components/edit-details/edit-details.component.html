@@ -1,0 +1,33 @@
+<mat-toolbar>
+    <span>Edit Details</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form [formGroup]="editFormGroup">
+    <div class="edit-form">
+        <div class="set-column">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" type="text"/>
+                <mat-error *ngIf="editFormGroup.get('name').hasError('required')">Required!</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="set-column">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email"/>
+                <mat-error *ngIf="editFormGroup.get('email').hasError('required')">Required!</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="set-column">
+            <mat-form-field>
+                <mat-label>Body</mat-label>
+                <input matInput formControlName="body" type="text"/>
+                <mat-error *ngIf="editFormGroup.get('body').hasError('required')">Required!</mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="button-row">
+        <button mat-raised-button color="primary" type="submit" (click)="onSubmit()" [disabled]="!editFormGroup.valid">Save</button>
+      </div>
+</form>

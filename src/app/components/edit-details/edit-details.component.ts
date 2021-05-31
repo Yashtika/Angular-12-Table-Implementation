@@ -18,7 +18,7 @@ export class EditDetailsComponent implements OnInit {
     this.editFormGroup = this.formbuilder.group({
       id: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
       body: new FormControl('', Validators.required),
     });
     this.editFormGroup.setValue({

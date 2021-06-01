@@ -16,6 +16,11 @@ API Details:
 URL - https://jsonplaceholder.typicode.com/comments
 Method - GET
 
+Node version: 14.17.0
+Angular: 12.0.2
+TS: 4.2.4
+Npm: 6.14.13
+
 Steps to download and run the application-
 1. Download the zip / through git .
 2. Open VSCode/Atom (or any other Editor as preferable) with the downloaded code as file location
